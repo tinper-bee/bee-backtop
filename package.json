@@ -1,6 +1,6 @@
 {
  "name": "bee-backTop",
- "version": "0.1.1",
+ "version": "0.1.2",
  "description": "BackTop ui component for react",
  "keywords": [
   "react",
@@ -14,7 +14,7 @@
   "node": ">=4.0.0"
  },
  "homepage": "https://github.com/tinper-bee/bee-backTop.git",
- "author": "yonyou",
+ "author": "liushaozhen",
  "repository": "http://github.com/tinper-bee/bee-backTop",
  "bugs": "https://github.com/tinper-bee/bee-backTop.git/issues",
  "license": "MIT",
