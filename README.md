@@ -15,16 +15,38 @@ some description...
 
 ## 使用方法
 
-```js
-
 ```
+import Backtop from 'bee-backtop';
 
+class Backtop extends Component {
+    render() {
+        return (
+            <Backtop/>
+        )
+    }
+}
+```
+#### 样式引入
+- 可以使用link引入build目录下Clipboard.css
+```
+<link rel="stylesheet" href="./node_modules/bee-backtop/build/Backtop.css">
+```
+- 可以在js中import样式
+```js
+import "./node_modules/bee-backtop/src/Backtop.scss"
+//或是
+import "./node_modules/bee-backtop/build/Backtop.css"
+```
 
 
 ## API
 
 |参数|说明|类型|默认值|
 |:--|:---:|:--:|---:|
+|visibilityHeight|当滚动条高度达到多少显示backtop|`number`|400|
+|target|设置要监听滚动事件的元素|`function`|() => window|
+|click|点击backtop时的回调函数|`function`|-|
+|character|自定义字符|`ReactNode`/`string`|<Icon type="uf-top-up"/>|
 
 #### 开发调试
 
