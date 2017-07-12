@@ -4,7 +4,7 @@
 * @description 这是描述
 *
 */
-class Demo1 extends Component {
+class Demo2 extends Component {
 render () {
 return (
     <div>
@@ -49,7 +49,7 @@ return (
         <p>1</p>
         <p>1</p>
         <p>1</p>
-        <Backtop />
+        <Backtop visibilityHeight={200} character="UP" click={()=>{alert('回到顶部')}}/>
     </div>
 )
 }

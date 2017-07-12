@@ -4,10 +4,10 @@
 * @description 这是描述
 *
 */
-class Demo1 extends Component {
+class Demo3 extends Component {
 render () {
 return (
-    <div>
+    <div id="text" style={{'height':'300px','overflow':'auto'}}>
         <p>1</p>
         <p>1</p>
         <p>1</p>
@@ -49,7 +49,7 @@ return (
         <p>1</p>
         <p>1</p>
         <p>1</p>
-        <Backtop />
+        <Backtop target={()=>document.getElementById('text')} />
     </div>
 )
 }
