@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _react = require('react');
@@ -21,28 +21,28 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var propTypes = {};
 var defaultProps = {};
 
-var BackTop = function (_Component) {
-    _inherits(BackTop, _Component);
+var Backtop = function (_Component) {
+  _inherits(Backtop, _Component);
 
-    function BackTop() {
-        _classCallCheck(this, BackTop);
+  function Backtop() {
+    _classCallCheck(this, Backtop);
 
-        return _possibleConstructorReturn(this, _Component.apply(this, arguments));
-    }
+    return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+  }
 
-    BackTop.prototype.render = function render() {
-        return _react2["default"].createElement(
-            'h2',
-            null,
-            'Welcome use tinper-bee'
-        );
-    };
+  Backtop.prototype.render = function render() {
+    return _react2["default"].createElement(
+      'h2',
+      null,
+      'Welcome use tinper-bee'
+    );
+  };
 
-    return BackTop;
+  return Backtop;
 }(_react.Component);
 
 ;
-BackTop.propTypes = propTypes;
-BackTop.defaultProps = defaultProps;
-exports["default"] = BackTop;
+Backtop.propTypes = propTypes;
+Backtop.defaultProps = defaultProps;
+exports["default"] = Backtop;
 module.exports = exports['default'];

@@ -1,22 +1,22 @@
 {
- "name": "bee-backTop",
- "version": "0.1.2",
- "description": "BackTop ui component for react",
+ "name": "bee-backtop",
+ "version": "0.1.1",
+ "description": "Backtop ui component for react",
  "keywords": [
   "react",
   "react-component",
-  "bee-backTop",
+  "bee-backtop",
   "iuap-design",
   "tinper-bee",
-  "BackTop"
+  "Backtop"
  ],
  "engines": {
   "node": ">=4.0.0"
  },
- "homepage": "https://github.com/tinper-bee/bee-backTop.git",
- "author": "liushaozhen",
- "repository": "http://github.com/tinper-bee/bee-backTop",
- "bugs": "https://github.com/tinper-bee/bee-backTop.git/issues",
+ "homepage": "https://github.com/tinper-bee/bee-backtop.git",
+ "author": "yonyou",
+ "repository": "http://github.com/tinper-bee/bee-backtop",
+ "bugs": "https://github.com/tinper-bee/bee-backtop.git/issues",
  "license": "MIT",
  "main": "./build/index.js",
  "config": {
