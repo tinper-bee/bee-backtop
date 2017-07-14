@@ -22,47 +22,20 @@ class Demo1 extends Component {
 render () {
 return (
     <div>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
+        <p>我为测试而生</p>
+        <p>我为测试而生</p>
+        <p>我为测试而生</p>
+        <p>我为测试而生</p>
+        <p>我为测试而生</p>
+        <p>我为测试而生</p>
+        <p>我为测试而生</p>
+        <p>我为测试而生</p>
+        <p>我为测试而生</p>
+        <p>我为测试而生</p>
+        <p>我为测试而生</p>
+        <p>我为测试而生</p>
+        <p>我为测试而生</p>
+        <p>我为测试而生</p>
         <Backtop />
     </div>
 )
@@ -76,108 +49,47 @@ return (
 class Demo2 extends Component {
 render () {
 return (
-    <div>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <Backtop visibilityHeight={200} character="UP" click={()=>{alert('回到顶部')}}/>
+    <div id="text" className="demo-two" >
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+            <p>我为测试而生</p>
+        <Backtop target={()=>document.getElementById('text')} character="UP"/>
     </div>
 )
 }
-}/**
-*
-* @title 这是标题
-* @description 这是描述
-*
-*/
-class Demo3 extends Component {
-render () {
-return (
-    <div id="text" style={{'height':'300px','overflow':'auto'}}>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <p>1</p>
-        <Backtop target={()=>document.getElementById('text')} />
-    </div>
-)
-}
-}var DemoArray = [{"example":<Demo1 />,"title":" 这是标题","code":"/**\n*\n* @title 这是标题\n* @description 这是描述\n*\n*/\nclass Demo1 extends Component {\nrender () {\nreturn (\n    <div>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <Backtop />\n    </div>\n)\n}\n}","desc":" 这是描述"},{"example":<Demo2 />,"title":" 这是标题","code":"/**\n*\n* @title 这是标题\n* @description 这是描述\n*\n*/\nclass Demo2 extends Component {\nrender () {\nreturn (\n    <div>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <Backtop visibilityHeight={200} character=\"UP\" click={()=>{alert('回到顶部')}}/>\n    </div>\n)\n}\n}","desc":" 这是描述"},{"example":<Demo3 />,"title":" 这是标题","code":"/**\n*\n* @title 这是标题\n* @description 这是描述\n*\n*/\nclass Demo3 extends Component {\nrender () {\nreturn (\n    <div id=\"text\" style={{'height':'300px','overflow':'auto'}}>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <p>1</p>\n        <Backtop target={()=>document.getElementById('text')} />\n    </div>\n)\n}\n}","desc":" 这是描述"}]
+}var DemoArray = [{"example":<Demo1 />,"title":" 这是标题","code":"/**\n*\n* @title 这是标题\n* @description 这是描述\n*\n*/\nclass Demo1 extends Component {\nrender () {\nreturn (\n    <div>\n        <p>我为测试而生</p>\n        <p>我为测试而生</p>\n        <p>我为测试而生</p>\n        <p>我为测试而生</p>\n        <p>我为测试而生</p>\n        <p>我为测试而生</p>\n        <p>我为测试而生</p>\n        <p>我为测试而生</p>\n        <p>我为测试而生</p>\n        <p>我为测试而生</p>\n        <p>我为测试而生</p>\n        <p>我为测试而生</p>\n        <p>我为测试而生</p>\n        <p>我为测试而生</p>\n        <Backtop />\n    </div>\n)\n}\n}","desc":" 这是描述"},{"example":<Demo2 />,"title":" 这是标题","code":"/**\n*\n* @title 这是标题\n* @description 这是描述\n*\n*/\nclass Demo2 extends Component {\nrender () {\nreturn (\n    <div id=\"text\" className=\"demo-two\" >\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n            <p>我为测试而生</p>\n        <Backtop target={()=>document.getElementById('text')} character=\"UP\"/>\n    </div>\n)\n}\n}","desc":" 这是描述"}]
 
 
 class Demo extends Component {

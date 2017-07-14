@@ -30,7 +30,7 @@ class Backtop extends Component {
     scroll() {
         let self=this;
         this.props.target().onscroll = function () {
-            if ((self.props.target().scrollY||self.props.target().scrollHeight) >= self.props.visibilityHeight) {
+            if ((self.props.target().scrollY||self.props.target().scrollTop) >= self.props.visibilityHeight) {
                 self.setState({
                     show: true
                 })
@@ -44,6 +44,9 @@ class Backtop extends Component {
 
     click() {
         this.props.target().scrollTo?this.props.target().scrollTo(0, 0):this.props.target().scrollTop=0;
+        this.setState({
+            show: false
+        });
         this.props.click();
     }
 

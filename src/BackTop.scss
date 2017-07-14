@@ -3,10 +3,10 @@
 .u-backtop{
   cursor: pointer;
   position: fixed;
-  right: 10px;
-  bottom: 10px;
-  z-index: 999;
-  background: #ccc;
-  color: #000;
-  padding: 5px;
+  right: $backtop-right;
+  bottom: $backtop-bottom;
+  z-index: $zindex-backtop;
+  background: $backtop-background;
+  color: $backtop-color;
+  padding: $back-top-padding;
 }
