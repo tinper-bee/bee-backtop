@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -12,13 +14,11 @@ var _beeIcon = require('bee-icon');
 
 var _beeIcon2 = _interopRequireDefault(_beeIcon);
 
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -76,18 +76,46 @@ var Backtop = function (_Component) {
     };
 
     Backtop.prototype.click = function click() {
-        this.props.target().scrollTo ? this.props.target().scrollTo(0, 0) : this.props.target().scrollTop = 0;
-        this.setState({
-            show: false
-        });
+        var _this2 = this;
+
+        var height = this.props.target().scrollY || this.props.target().scrollTop;
+        var timer = function timer(height) {
+            var self = _this2;
+            var h = Math.floor(height / 3);
+            self.props.target().scrollTo ? self.props.target().scrollTo(0, h) : self.props.target().scrollTop = h;
+            if (h > 0) {
+                window.clearInterval(window.backTopTimer);
+                window.backTopTimer = window.setInterval(function () {
+                    timer(h);
+                }, 30);
+            } else {
+                _this2.setState({
+                    show: false
+                });
+                window.clearInterval(window.backTopTimer);
+                return;
+            }
+        };
+        timer(height);
         this.props.click();
     };
 
     Backtop.prototype.render = function render() {
+        var _props = this.props,
+            className = _props.className,
+            children = _props.children,
+            visibilityHeight = _props.visibilityHeight,
+            click = _props.click,
+            target = _props.target,
+            character = _props.character,
+            others = _objectWithoutProperties(_props, ['className', 'children', 'visibilityHeight', 'click', 'target', 'character']);
+
+        className = className ? className : '';
+        className = !this.state.show ? 'u-backtop hide ' + className : 'u-backtop ' + className;
         return _react2["default"].createElement(
             'span',
-            { className: (0, _classnames2["default"])({ 'u-backtop': true, 'hide': !this.state.show }), onClick: this.click },
-            this.props.character
+            _extends({}, others, { className: className, onClick: this.click }),
+            children ? children : this.props.character
         );
     };
 
