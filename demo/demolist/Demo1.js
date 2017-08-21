@@ -22,7 +22,7 @@ return (
         <p>我为测试而生</p>
         <p>我为测试而生</p>
         <p>我为测试而生</p>
-        <Backtop />
+            <Backtop/>
     </div>
 )
 }
