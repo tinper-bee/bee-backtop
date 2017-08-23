@@ -37,7 +37,8 @@ var defaultProps = {
     target: function target() {
         return window;
     },
-    character: _react2["default"].createElement(_beeIcon2["default"], { type: 'uf-top-up' })
+    character: _react2["default"].createElement(_beeIcon2["default"], { type: 'uf-top-up' }),
+    clsPrefix: 'u-backtop'
 };
 
 var Backtop = function (_Component) {
@@ -108,10 +109,11 @@ var Backtop = function (_Component) {
             click = _props.click,
             target = _props.target,
             character = _props.character,
-            others = _objectWithoutProperties(_props, ['className', 'children', 'visibilityHeight', 'click', 'target', 'character']);
+            clsPrefix = _props.clsPrefix,
+            others = _objectWithoutProperties(_props, ['className', 'children', 'visibilityHeight', 'click', 'target', 'character', 'clsPrefix']);
 
         className = className ? className : '';
-        className = !this.state.show ? 'u-backtop hide ' + className : 'u-backtop ' + className;
+        className = !this.state.show ? clsPrefix + ' hide ' + className : clsPrefix + ' ' + className;
         return _react2["default"].createElement(
             'span',
             _extends({}, others, { className: className, onClick: this.click }),
