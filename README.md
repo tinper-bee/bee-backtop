@@ -27,7 +27,7 @@ class Backtop extends Component {
 }
 ```
 #### 样式引入
-- 可以使用link引入build目录下Clipboard.css
+- 可以使用link引入build目录下Backtop.css
 ```
 <link rel="stylesheet" href="./node_modules/bee-backtop/build/Backtop.css">
 ```
