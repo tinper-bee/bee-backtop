@@ -13,7 +13,7 @@ const defaultProps = {
     character: <Icon type="uf-top-up"/>,
     clsPrefix: 'u-backtop',
 };
-class Backtop extends Component {
+class BackTop extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -77,6 +77,6 @@ class Backtop extends Component {
     }
 }
 ;
-Backtop.propTypes = propTypes;
-Backtop.defaultProps = defaultProps;
-export default Backtop;
+BackTop.propTypes = propTypes;
+BackTop.defaultProps = defaultProps;
+export default BackTop;

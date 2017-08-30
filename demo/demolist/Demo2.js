@@ -6,7 +6,7 @@
  */
 
 import React, {Component} from 'react';
-import Backtop from '../../src';
+import BackTop from '../../src';
 
 class Demo2 extends Component {
     render() {
@@ -43,7 +43,7 @@ class Demo2 extends Component {
                 <p>你会挽着我的衣袖 </p>
                 <p>我会把手揣进裤兜</p>
                 <p>走到玉林路的尽头</p>
-                <Backtop target={() => document.getElementById('text')} character="UP"/>
+                <BackTop target={() => document.getElementById('text')} character="UP"/>
             </div>
         )
     }

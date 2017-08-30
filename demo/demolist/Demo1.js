@@ -5,7 +5,7 @@
  *
  */
 import React, {Component} from 'react';
-import Backtop from '../../src';
+import BackTop from '../../src';
 
 class Demo1 extends Component {
     render() {
@@ -25,7 +25,7 @@ class Demo1 extends Component {
                 <p>亲吻着我额头</p>
                 <p>在那座阴雨的小城里</p>
                 <p>我从未忘记你</p>
-                <Backtop/>
+                <BackTop/>
             </div>
         )
     }
