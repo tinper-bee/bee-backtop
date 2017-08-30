@@ -41,11 +41,11 @@ var defaultProps = {
     clsPrefix: 'u-backtop'
 };
 
-var Backtop = function (_Component) {
-    _inherits(Backtop, _Component);
+var BackTop = function (_Component) {
+    _inherits(BackTop, _Component);
 
-    function Backtop(props) {
-        _classCallCheck(this, Backtop);
+    function BackTop(props) {
+        _classCallCheck(this, BackTop);
 
         var _this = _possibleConstructorReturn(this, _Component.call(this, props));
 
@@ -57,11 +57,11 @@ var Backtop = function (_Component) {
         return _this;
     }
 
-    Backtop.prototype.componentDidMount = function componentDidMount() {
+    BackTop.prototype.componentDidMount = function componentDidMount() {
         this.scroll();
     };
 
-    Backtop.prototype.scroll = function scroll() {
+    BackTop.prototype.scroll = function scroll() {
         var self = this;
         this.props.target().onscroll = function () {
             if ((self.props.target().scrollY || self.props.target().scrollTop) >= self.props.visibilityHeight) {
@@ -76,7 +76,7 @@ var Backtop = function (_Component) {
         };
     };
 
-    Backtop.prototype.click = function click() {
+    BackTop.prototype.click = function click() {
         var _this2 = this;
 
         var height = this.props.target().scrollY || this.props.target().scrollTop;
@@ -101,7 +101,7 @@ var Backtop = function (_Component) {
         this.props.click();
     };
 
-    Backtop.prototype.render = function render() {
+    BackTop.prototype.render = function render() {
         var _props = this.props,
             className = _props.className,
             children = _props.children,
@@ -121,11 +121,11 @@ var Backtop = function (_Component) {
         );
     };
 
-    return Backtop;
+    return BackTop;
 }(_react.Component);
 
 ;
-Backtop.propTypes = propTypes;
-Backtop.defaultProps = defaultProps;
-exports["default"] = Backtop;
+BackTop.propTypes = propTypes;
+BackTop.defaultProps = defaultProps;
+exports["default"] = BackTop;
 module.exports = exports['default'];
