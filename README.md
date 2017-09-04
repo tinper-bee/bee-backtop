@@ -18,7 +18,7 @@ some description...
 ```
 import BackTop from 'bee-backtop';
 
-class BackTop extends Component {
+class BackTopDemo extends Component {
     render() {
         return (
             <BackTop/>
