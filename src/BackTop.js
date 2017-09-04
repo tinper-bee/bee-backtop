@@ -11,7 +11,7 @@ const defaultProps = {
     },
     target: () => window,
     character: <Icon type="uf-top-up"/>,
-    clsPrefix: 'u-backtop',
+    clsPrefix: 'u-back-top',
 };
 class BackTop extends Component {
     constructor(props) {
@@ -68,7 +68,7 @@ class BackTop extends Component {
     render() {
         let {className, children, visibilityHeight, click, target, character,clsPrefix, ...others} = this.props;
         className = className ? className : '';
-        className = !this.state.show ? clsPrefix+' hide ' + className : clsPrefix+' ' + className;
+        className = !this.state.show ? clsPrefix+' hide '+(target()===window?'':'u-back-dom ') + className  : clsPrefix+' '+(target()===window?'':'u-back-dom ') + className;
         return (
             <span {...others} className={className} onClick={this.click}>
                     {children ? children : this.props.character}
