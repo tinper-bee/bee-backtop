@@ -11,7 +11,7 @@
 
 react bee-backtop component for tinper-bee
 
-some description...
+返回顶部
 
 ## 使用方法
 
