@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _beeIcon = require('bee-icon');
 
 var _beeIcon2 = _interopRequireDefault(_beeIcon);
@@ -27,9 +31,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
 
 var propTypes = {
-    visibilityHeight: _react.PropTypes.number,
-    click: _react.PropTypes.func,
-    target: _react.PropTypes.func
+    visibilityHeight: _propTypes2["default"].number,
+    click: _propTypes2["default"].func,
+    target: _propTypes2["default"].func
 };
 var defaultProps = {
     visibilityHeight: 400,
@@ -38,7 +42,7 @@ var defaultProps = {
         return window;
     },
     character: _react2["default"].createElement(_beeIcon2["default"], { type: 'uf-top-up' }),
-    clsPrefix: 'u-backtop'
+    clsPrefix: 'u-back-top'
 };
 
 var BackTop = function (_Component) {
@@ -113,7 +117,7 @@ var BackTop = function (_Component) {
             others = _objectWithoutProperties(_props, ['className', 'children', 'visibilityHeight', 'click', 'target', 'character', 'clsPrefix']);
 
         className = className ? className : '';
-        className = !this.state.show ? clsPrefix + ' hide ' + className : clsPrefix + ' ' + className;
+        className = !this.state.show ? clsPrefix + ' hide ' + (target() === window ? '' : 'u-back-dom ') + className : clsPrefix + ' ' + (target() === window ? '' : 'u-back-dom ') + className;
         return _react2["default"].createElement(
             'span',
             _extends({}, others, { className: className, onClick: this.click }),
