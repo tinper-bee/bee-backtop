@@ -92,7 +92,7 @@ var BackTop = function (_Component) {
                 window.clearInterval(window.backTopTimer);
                 window.backTopTimer = window.setInterval(function () {
                     timer(h);
-                }, 30);
+                }, 90);
             } else {
                 _this2.setState({
                     show: false
