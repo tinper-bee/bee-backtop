@@ -53,7 +53,7 @@ class BackTop extends Component {
                 window.clearInterval(window.backTopTimer);
                 window.backTopTimer=window.setInterval(()=>{
                     timer(h);
-                },30);
+                },90);
             }else{
                 this.setState({
                     show: false
