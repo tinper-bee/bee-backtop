@@ -4,11 +4,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Backtop = require('./Backtop');
+var _BackTop = require('./BackTop');
 
-var _Backtop2 = _interopRequireDefault(_Backtop);
+var _BackTop2 = _interopRequireDefault(_BackTop);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-exports["default"] = _Backtop2["default"];
+exports["default"] = _BackTop2["default"];
 module.exports = exports['default'];

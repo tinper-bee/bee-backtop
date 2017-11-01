@@ -1,6 +1,6 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Icon from 'bee-icon';
-import classnames from 'classnames';
 const propTypes = {
     visibilityHeight: PropTypes.number,
     click: PropTypes.func,
@@ -12,8 +12,9 @@ const defaultProps = {
     },
     target: () => window,
     character: <Icon type="uf-top-up"/>,
+    clsPrefix: 'u-back-top',
 };
-class Backtop extends Component {
+class BackTop extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -28,13 +29,13 @@ class Backtop extends Component {
     }
 
     scroll() {
-        let self=this;
+        let self = this;
         this.props.target().onscroll = function () {
-            if ((self.props.target().scrollY||self.props.target().scrollTop) >= self.props.visibilityHeight) {
+            if ((self.props.target().scrollY || self.props.target().scrollTop) >= self.props.visibilityHeight) {
                 self.setState({
                     show: true
                 })
-            }else{
+            } else {
                 self.setState({
                     show: false
                 });
@@ -43,20 +44,40 @@ class Backtop extends Component {
     }
 
     click() {
-        this.props.target().scrollTo?this.props.target().scrollTo(0, 0):this.props.target().scrollTop=0;
-        this.setState({
-            show: false
-        });
+        let height=this.props.target().scrollY||this.props.target().scrollTop;
+        let timer=(height)=>{
+            let self=this;
+            let h=Math.floor(height/3);
+            self.props.target().scrollTo ? self.props.target().scrollTo(0, h) : self.props.target().scrollTop = h;
+            if(h>0){
+                window.clearInterval(window.backTopTimer);
+                window.backTopTimer=window.setInterval(()=>{
+                    timer(h);
+                },90);
+            }else{
+                this.setState({
+                    show: false
+                });
+                window.clearInterval(window.backTopTimer);
+                return;
+            }
+        };
+        timer(height);
         this.props.click();
     }
 
     render() {
-        return (<span className={classnames({'u-backtop': true, 'hide': !this.state.show})} onClick={this.click}>
-            {this.props.character}
-        </span> )
+        let {className, children, visibilityHeight, click, target, character,clsPrefix, ...others} = this.props;
+        className = className ? className : '';
+        className = !this.state.show ? clsPrefix+' hide '+(target()===window?'':'u-back-dom ') + className  : clsPrefix+' '+(target()===window?'':'u-back-dom ') + className;
+        return (
+            <span {...others} className={className} onClick={this.click}>
+                    {children ? children : this.props.character}
+                </span>
+        )
     }
 }
 ;
-Backtop.propTypes = propTypes;
-Backtop.defaultProps = defaultProps;
-export default Backtop;
+BackTop.propTypes = propTypes;
+BackTop.defaultProps = defaultProps;
+export default BackTop;

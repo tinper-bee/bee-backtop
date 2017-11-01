@@ -2,10 +2,8 @@
 import { Con, Row, Col } from 'bee-layout';
 import { Panel } from 'bee-panel';
 import Button from 'bee-button';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import Backtop from '../src';
-
 
 const CARET = <i className="uf uf-arrow-down"></i>;
 

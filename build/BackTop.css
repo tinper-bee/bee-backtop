@@ -1,6 +1,6 @@
 /* FormGroup */
 /*  Navlayout  */
-.u-backtop {
+.u-back-top {
   cursor: pointer;
   position: fixed;
   right: 10px;
@@ -9,3 +9,7 @@
   background: rgb(191,191,191);
   color: rgb(255,255,255);
   padding: 5px; }
+
+.u-back-top.u-back-dom {
+  position: absolute;
+  right: 40px; }

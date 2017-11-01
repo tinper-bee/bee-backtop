@@ -11,31 +11,31 @@
 
 react bee-backtop component for tinper-bee
 
-some description...
+返回顶部
 
 ## 使用方法
 
 ```
-import Backtop from 'bee-backtop';
+import BackTop from 'bee-backtop';
 
-class Backtop extends Component {
+class BackTopDemo extends Component {
     render() {
         return (
-            <Backtop/>
+            <BackTop/>
         )
     }
 }
 ```
 #### 样式引入
-- 可以使用link引入build目录下Clipboard.css
+- 可以使用link引入build目录下BackTop.css
 ```
-<link rel="stylesheet" href="./node_modules/bee-backtop/build/Backtop.css">
+<link rel="stylesheet" href="./node_modules/bee-backtop/build/BackTop.css">
 ```
 - 可以在js中import样式
 ```js
-import "./node_modules/bee-backtop/src/Backtop.scss"
+import "./node_modules/bee-backtop/src/BackTop.scss"
 //或是
-import "./node_modules/bee-backtop/build/Backtop.css"
+import "./node_modules/bee-backtop/build/BackTop.css"
 ```
 
 
@@ -45,7 +45,7 @@ import "./node_modules/bee-backtop/build/Backtop.css"
 |:--|:---:|:--:|---:|
 |visibilityHeight|当滚动条高度达到多少显示backtop|`number`|400|
 |target|设置要监听滚动事件的元素|`function`|() => window|
-|click|点击backtop时的回调函数|`function`|-|
+|click|点击backTop时的回调函数|`function`|-|
 |character|自定义字符|`ReactNode`/`string`|<Icon type="uf-top-up"/>|
 
 #### 开发调试

@@ -1,6 +1,6 @@
 @import "../node_modules/tinper-bee-core/scss/minxin-variables";
 @import "../node_modules/tinper-bee-core/scss/minxin-mixins";
-.u-backtop{
+.u-back-top{
   cursor: pointer;
   position: fixed;
   right: $backtop-right;
@@ -9,4 +9,8 @@
   background: $backtop-background;
   color: $backtop-color;
   padding: $back-top-padding;
+}
+.u-back-top.u-back-dom{
+  position: absolute;
+  right: $backtop-dom-right;
 }
